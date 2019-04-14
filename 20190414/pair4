@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+   
+<h1>果物 -色/連想ゲーム<h1>
+<br>
+すきな言葉を入れてみよう！<br>
+<input type="text" name="fruit"><br>
+<input type="button" onclick="submit()" value="さぶみ">
+<input type="button" onclick="test()" value="てすと">
+
+<script>
+ function submit()
+ {
+   alert(determine(getForm()))
+ }
+
+ function determine(fruit)
+ {
+     switch (fruit) {
+       case 'apple':
+         return 'red'
+         
+       case 'banana':
+           return 'yellow'
+                  case 'にほん':
+             return '東京'
+              case '福井':
+             return '永平寺'
+             case '永平寺':
+             return '禅'
+             case '禅':
+             return '禅IT'
+             case '禅IT':
+             return 'あみる'
+
+
+       default:
+
+         return ''
+     }
+ }
+
+ function test()
+ {
+     console.log("=== Testing ===")
+     matches("apple", "red")
+     matches("banana", "yellow")
+          matches("にほん", "東京")
+          matches("福井", "永平寺")
+          matches("永平寺", "禅")
+          matches("禅", "禅IT")
+          matches("禅IT", "あみる")
+ 　　　　 
+
+ }
+
+ function getForm() {
+
+   return document.getElementsByName("fruit")[0].value
+
+ }
+
+
+
+ // Test Framework
+
+ function matches(fruit, color)
+
+ {
+
+   if (determine(fruit) == color) {
+
+     console.log(fruit + " : OK")
+
+   }
+
+   else {
+
+     console.log(fruit + " : Bad")
+
+   }
+
+ }
+
+</script>
+</body>
+</html>
