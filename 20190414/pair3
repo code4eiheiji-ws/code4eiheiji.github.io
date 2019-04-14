@@ -1,0 +1,50 @@
+<h1>プロスポーツ選手->人 </h1>
+
+<input type="text" name="fruit"><br>
+
+<input type="button" onclick="submit()" value="Submit">
+<input type="button" onclick="test()" value="check1">
+
+
+<script>
+ function submit()
+ {
+   alert(determine(getForm()))
+ }
+ function determine(fruit)
+ {
+          switch (fruit) {
+       case 'イチロー':
+         return '野球'
+          case '大阪直美':
+         return 'テニス'
+         
+       default:
+         return ''
+     }
+ }
+ function test()
+ {
+     console.log("=== Testing ===")
+     matches("イチロー", "野球")
+      matches("大阪直美", "テニス")
+     
+ }
+ function getForm() {
+   return document.getElementsByName("fruit")[0].value
+ }
+ // Test Framework
+ function matches(fruit, color)
+ {
+   if (determine(fruit) == color) {
+     console.log(fruit + " : OK")
+   }
+   else {
+     console.log(fruit + " : Bad")
+   }
+ }
+</script>
+
+<input type="button" onclick="submit()" value="Submit">
+<input type="button" onclick="test()" value="テスト">
+
