@@ -1,0 +1,66 @@
+<h1>合言葉</h1>
+<br> FukuiZenIT
+<input type="text" name="fruit"><br>
+
+<input type="button" onclick="submit()" value="Submit">
+<input type="button" onclick="test()" value="Test">
+
+<script>
+ function submit()
+ {
+   alert(determine(getForm()))
+ }
+ function determine(fruit)
+ {
+     switch (fruit) {
+       case 'apple':
+         return 'black'
+       case 'banana':
+         return 'yellow'
+       case 'peach':
+         return 'pink'
+         case 'eiheizi':
+         return 'zen'
+         case 'amil':
+         return 'he is skinhead'
+          case 'kawai':
+         return 'hidemitu'
+         case'eiheiji':
+         return'gomadouhu'
+         case 'evolution':
+         return 'amil'
+         case 'tokyo':
+         return 'urusai'
+       default:
+         return ''
+     }     
+    
+ }
+ function test()
+ {
+     console.log("=== Testing ===")
+     matches("apple", "black")
+     matches("banana","yellow")
+     matches("peach","pink")
+      matches("eiheizi","zen")
+      matches("amil","he is skinhead")
+      matches("kawai","hidemitu")
+      matches("evolution","amil")
+      matches("eiheiji","gomadouhu")
+      matches("tokyo","urusai")
+ }
+ function getForm() {
+   return document.getElementsByName("fruit")[0].value
+ }
+ // Test Framework
+ function matches(fruit, color)
+ {
+   if (determine(fruit) == color) {
+     console.log(fruit + " : OK")
+   }
+   else {
+     console.log(fruit + " : Bad")
+   }
+ }
+</script>
+
